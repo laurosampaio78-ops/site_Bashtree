@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bashtree · Sites, sistemas e agentes de IA para pequenos negócios</title>
+<meta name="description" content="Criamos sites, sistemas e automações com inteligência artificial para pequenas empresas e profissionais autônomos que querem crescer sem complicação.">
+<meta name="theme-color" content="#0B0F14">
+<meta property="og:title" content="Bashtree">
+<meta property="og:description" content="Sites, sistemas e agentes de IA para pequenas empresas e profissionais autônomos.">
+<meta property="og:type" content="website">
+<link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="notice" id="aviso" hidden></div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="logo" aria-label="Bashtree, início">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="9" fill="#F0A030"/>
+        <path d="M13 13.5L20 7l7 6.5M13 19L20 12.5l7 6.5M13 24.5L20 18l7 6.5" stroke="#fff" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M20 28v5" stroke="#111" stroke-width="2.8" stroke-linecap="round"/>
+      </svg>
+      <span><b>bash</b><span class="t">tree</span></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Menu principal"></nav>
+    <a href="#contato" class="btn" id="botao-menu">Pedir orçamento</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="circuit"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag" id="hero-etiqueta"></span>
+        <h1 id="hero-titulo">Tecnologia que <em>trabalha</em> pelo seu negócio.</h1>
+        <p class="lead" id="hero-subtitulo"></p>
+        <div class="cta">
+          <a href="#contato" class="btn" id="hero-btn1">Pedir orçamento</a>
+          <a href="#servicos" class="btn ghost" id="hero-btn2">Ver serviços</a>
+        </div>
+      </div>
+      <div class="hero-art" id="hero-arte" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="sec" id="serv-titulo"></h2><p class="mono" id="serv-subtitulo"></p></div>
+      <div class="cols" id="serv-grupos"></div>
+      <div class="flow" id="serv-fluxo"></div>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="alt">
+    <div class="circuit"></div>
+    <div class="wrap">
+      <div class="sec-head"><h2 class="sec" id="como-titulo"></h2><p class="mono" id="como-subtitulo"></p></div>
+      <ol class="steps" id="como-etapas"></ol>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="sec" id="port-titulo"></h2><p class="mono" id="port-subtitulo"></p></div>
+      <div class="cards" id="port-projetos"></div>
+    </div>
+  </section>
+
+  <section id="sobre" class="alt">
+    <div class="circuit"></div>
+    <div class="wrap about">
+      <div>
+        <h2 class="sec" id="sobre-titulo"></h2>
+        <p class="big" id="sobre-texto"></p>
+      </div>
+      <div class="mv">
+        <div><h4>Missão</h4><p id="sobre-missao"></p></div>
+        <div><h4>Visão</h4><p id="sobre-visao"></p></div>
+        <div><h4>Valores</h4><ul class="values" id="sobre-valores"></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="wrap contact">
+      <div>
+        <h2 class="sec" id="cont-titulo">Vamos conversar?</h2>
+        <p class="contact-text" id="cont-texto"></p>
+        <ul class="channels" id="cont-canais"></ul>
+      </div>
+
+      <!-- Formulário capturado pelo Netlify Forms (precisa estar no HTML estático) -->
+      <form name="contato" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="form-contato">
+        <input type="hidden" name="form-name" value="contato">
+        <p class="hidden"><label>Não preencha: <input name="bot-field"></label></p>
+        <label>Nome<input name="nome" required autocomplete="name" placeholder="Seu nome"></label>
+        <label>E-mail<input name="email" type="email" required autocomplete="email" placeholder="voce@email.com"></label>
+        <label>WhatsApp<input name="whatsapp" type="tel" autocomplete="tel" placeholder="(00) 00000-0000"></label>
+        <label>Tipo de negócio<input name="negocio" placeholder="Ex.: clínica, loja, consultoria"></label>
+        <label class="full">Serviço de interesse
+          <select name="servico">
+            <option>Software</option>
+            <option>Workflow Agêntico</option>
+            <option>Não sei ainda</option>
+          </select>
+        </label>
+        <label class="full">Mensagem<textarea name="mensagem" required placeholder="O que você precisa?"></textarea></label>
+        <button class="btn" type="submit" id="cont-botao">Enviar mensagem</button>
+        <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><span class="logo"><span><b>bash</b><span class="t">tree</span></span></span> · <span id="rodape-slogan">Tecnologia que trabalha pelo seu negócio</span></span>
+    <span>bashtree.com.br · © <span id="ano"></span></span>
+  </div>
+</footer>
+
+<noscript><p style="text-align:center;padding:20px">Ative o JavaScript para ver todo o conteúdo do site.</p></noscript>
+<script src="/js/main.js" defer></script>
+</body>
+</html>
